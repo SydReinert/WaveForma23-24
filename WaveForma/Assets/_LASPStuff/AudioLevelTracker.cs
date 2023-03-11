@@ -110,7 +110,7 @@ namespace Lasp
         float _fall = 0;
 
         // Check the status and try selecting the device.
-        void TrySelectDevice(string id)
+        public void TrySelectDevice(string id)
         {
             // At the moment, we only supports selecting a device before the
             // stream is initialized.
