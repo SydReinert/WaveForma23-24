@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   opacity:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.403
 --- !u!114 &-3306455397636876261
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090e3e4eec7ad5a47b778575e0ede947, type: 3}
   m_Name: Glitch
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   block:
     m_OverrideState: 1
-    m_Value: 0.058
+    m_Value: 0
   drift:
     m_OverrideState: 1
     m_Value: 0.185
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ad42d51df0b2f43ba2cab92a53036d, type: 3}
   m_Name: Recolor
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   edgeColor:
     m_OverrideState: 1
     m_Value: {r: 0.8207547, g: 0, b: 0, a: 0}
@@ -239,14 +239,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   rowCount:
-    m_OverrideState: 0
-    m_Value: 30
+    m_OverrideState: 1
+    m_Value: 525.9
   angle:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -90
   displacement:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   randomSeed:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 2
