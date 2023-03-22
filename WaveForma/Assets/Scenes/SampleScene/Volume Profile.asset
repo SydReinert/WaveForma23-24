@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Value: 0.083
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 1, a: 1}
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &-2018995751868389014
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -68,7 +68,7 @@ MonoBehaviour:
     m_Value: 0.22
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.93333334, b: 0.18953615, a: 1}
+    m_Value: {r: 0.83423483, g: 0.93333334, b: 0, a: 1}
   dirtTexture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -266,10 +266,10 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 0.608476, y: 0.7017416, z: 1, w: -0.38880253}
+    m_Value: {x: 0.7595604, y: 0.8150546, z: 1, w: -0.38880253}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 0.97866815, y: 1, z: 0.85719335, w: -0.4510108}
+    m_Value: {x: 1, y: 0.94597685, z: 0.81890213, w: -0.85210466}
   gain:
     m_OverrideState: 1
     m_Value: {x: 0.8627511, y: 0.8248647, z: 1, w: 0.20217733}

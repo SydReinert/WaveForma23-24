@@ -12,21 +12,63 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
 public partial class @VisualControls : IInputActionCollection2, IDisposable
 {
-
     public InputActionAsset asset { get; }
     public @VisualControls()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""VisualControls"",
-    ""maps"": [],
-    ""controlSchemes"": []
+    ""maps"": [
+        {
+            ""name"": ""Volume"",
+            ""id"": ""5585d643-2e23-4e02-ac9c-df30e60e522f"",
+            ""actions"": [
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""15ab3dd7-513e-4673-870f-6c95a03598eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""fa9cf214-61d3-4c2a-a856-73ee7b6cd179"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard Scheme"",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        }
+    ],
+    ""controlSchemes"": [
+        {
+            ""name"": ""Keyboard Scheme"",
+            ""bindingGroup"": ""Keyboard Scheme"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
+        // Volume
+        m_Volume = asset.FindActionMap("Volume", throwIfNotFound: true);
+        m_Volume_Newaction = m_Volume.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -66,7 +108,6 @@ public partial class @VisualControls : IInputActionCollection2, IDisposable
     public void Enable()
     {
         asset.Enable();
-        
     }
 
     public void Disable()
@@ -82,5 +123,51 @@ public partial class @VisualControls : IInputActionCollection2, IDisposable
     public int FindBinding(InputBinding bindingMask, out InputAction action)
     {
         return asset.FindBinding(bindingMask, out action);
+    }
+
+    // Volume
+    private readonly InputActionMap m_Volume;
+    private IVolumeActions m_VolumeActionsCallbackInterface;
+    private readonly InputAction m_Volume_Newaction;
+    public struct VolumeActions
+    {
+        private @VisualControls m_Wrapper;
+        public VolumeActions(@VisualControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Volume_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Volume; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(VolumeActions set) { return set.Get(); }
+        public void SetCallbacks(IVolumeActions instance)
+        {
+            if (m_Wrapper.m_VolumeActionsCallbackInterface != null)
+            {
+                @Newaction.started -= m_Wrapper.m_VolumeActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_VolumeActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_VolumeActionsCallbackInterface.OnNewaction;
+            }
+            m_Wrapper.m_VolumeActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
+            }
+        }
+    }
+    public VolumeActions @Volume => new VolumeActions(this);
+    private int m_KeyboardSchemeSchemeIndex = -1;
+    public InputControlScheme KeyboardSchemeScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeSchemeIndex == -1) m_KeyboardSchemeSchemeIndex = asset.FindControlSchemeIndex("Keyboard Scheme");
+            return asset.controlSchemes[m_KeyboardSchemeSchemeIndex];
+        }
+    }
+    public interface IVolumeActions
+    {
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }
