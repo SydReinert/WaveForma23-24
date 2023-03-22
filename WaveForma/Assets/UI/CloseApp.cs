@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CloseApp : MonoBehaviour
 {
-    void Quit() {
-        Application.Quit();
-    }
+     void Quit() {
+         Application.Quit();
+         Debug.Log("Quit");
+     }
 }

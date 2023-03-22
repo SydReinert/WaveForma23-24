@@ -1,0 +1,46 @@
+{
+    "name": "VisualControls",
+    "maps": [
+        {
+            "name": "Volume",
+            "id": "5585d643-2e23-4e02-ac9c-df30e60e522f",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "15ab3dd7-513e-4673-870f-6c95a03598eb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fa9cf214-61d3-4c2a-a856-73ee7b6cd179",
+                    "path": "<Keyboard>/1",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Keyboard Scheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard Scheme",
+            "bindingGroup": "Keyboard Scheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
