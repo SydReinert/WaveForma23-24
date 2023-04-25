@@ -511,15 +511,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.x
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.z
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448448].PropertyName
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Visualizer 1
-  delay: 100
+  delay: 120
 --- !u!4 &1005144626
 Transform:
   m_ObjectHideFlags: 0
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af76f8eceaffbf541ad22f07361efddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   ForwardX: 0
   ForwardY: 1
   ForwardZ: 0
@@ -1707,15 +1707,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.x
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.z
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448448].PropertyName
@@ -2113,15 +2113,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448453].Value1.z
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4944584559432782628, guid: d39ea27ab0c50e04893f10d37c2de16e, type: 3}
       propertyPath: managedReferences[3807747807449448448].PropertyName
@@ -2340,7 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af76f8eceaffbf541ad22f07361efddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 11
   ForwardX: 0
   ForwardY: 0
   ForwardZ: 1
