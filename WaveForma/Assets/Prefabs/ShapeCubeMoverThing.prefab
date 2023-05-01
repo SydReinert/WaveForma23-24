@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4562003296224244395}
   - component: {fileID: 4562003296224244396}
   - component: {fileID: 4562003296224244392}
+  - component: {fileID: 2716885805288171981}
   m_Layer: 0
   m_Name: ShapeCubeMoverThing
   m_TagString: Untagged
@@ -112,6 +113,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+--- !u!114 &2716885805288171981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562003296224244397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af76f8eceaffbf541ad22f07361efddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  ForwardX: 0
+  ForwardY: 1
+  ForwardZ: 0
 --- !u!1001 &124879891322650677
 PrefabInstance:
   m_ObjectHideFlags: 0
