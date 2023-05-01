@@ -56,11 +56,13 @@ public class inputController : MonoBehaviour
             {
                 sceneSwitcher.GetComponent<SceneFade>().enabled = false;
                 sceneSwitcherActivated = false;
+                sceneSwitcher.GetComponent<SceneFade>().CancelInvoke();
             }
             else
             {
                 sceneSwitcher.GetComponent<SceneFade>().enabled = true;
                 sceneSwitcherActivated = true;
+                sceneSwitcher.GetComponent<SceneFade>().StartCoroutine("Start");
             }
         }
     }
